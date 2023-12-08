@@ -5,19 +5,22 @@
   }
   
   body {
-    background-color: #f4d467;
+    background-color:black;
+    color: white;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   
   /*! Player Card/Component Styling */
   .card-container {
-    background-image: url("https://p4.wallpaperbetter.com/wallpaper/661/973/110/cool-nba-logo-wallpaper-preview.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2019/01/05/18/24/fantasy-3915624_640.jpg");
     min-width: 300px;
     min-height: 432px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .player-card {
-    height: 400px;
+    height: 420px;
     max-width: 280px;
     min-width: 230px;
   }
@@ -29,8 +32,31 @@
     height: 350px;
     transition: transform 0.2s;
     object-fit: cover;
+    filter: grayscale(100%);
   }
   
   .player-card:hover .player-logo {
     transform: scale(0.95);
   }
+  .logo{
+    width: 100px;
+    position: relative;
+  }
+
+  @keyframes leafFall {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    100% {
+      transform: translateY(300px) rotate(360deg);
+    }
+  }
+
+  .leaf {
+    position: absolute;
+
+    animation: leafFall 5s linear infinite; 
+  }
+  
+
+   
